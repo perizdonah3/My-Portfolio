@@ -1,21 +1,191 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Portfolio</title>
+    <meta charset="UTF-8">
+    <title>Periz Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        h1, h2 {
+            margin: 0;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(120deg, #a1c4fd, #c2e9fb);
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero img {
+            width: 150px;
+            border-radius: 50%;
+            border: 4px solid white;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        /* Sections */
+        section {
+            max-width: 1000px;
+            margin: 80px auto;
+            padding: 0 20px;
+        }
+
+        /* Projects */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* Skills */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .skill {
+            background: #a1c4fd;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        /* Contact */
+        .contact a {
+            display: inline-block;
+            margin: 10px;
+            background: #c2e9fb;
+            color: #333;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .contact a:hover {
+            background: #a1c4fd;
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #777;
+        }
+
+    </style>
 </head>
 <body>
 
-    <h1>Hi, I'm Periz 👋</h1>
-    <p>I am learning Python and Django</p>
+    <!-- Hero Section -->
+    <div class="hero">
+        <img src="https://via.placeholder.com/150" alt="Profile Picture">
+        <h1>Hi, I'm Periz 👋</h1>
+        <p>Aspiring Python & Django Developer</p>
+    </div>
 
-    <h2>My Project</h2>
-    <p>Disaster Management System</p>
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="projects">
+            <div class="card">
+                <img src="https://via.placeholder.com/300x150" alt="Project Screenshot">
+                <h3>Disaster Management System</h3>
+                <p>Web app built with Django to manage disaster response and resources.</p>
+                <a href="#">View Project</a>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/300x150" alt="Project Screenshot">
+                <h3>To-Do App</h3>
+                <p>A simple task manager built with Python and Django.</p>
+                <a href="#">View Project</a>
+            </div>
+            <!-- Add more project cards here -->
+        </div>
+    </section>
 
-    <h2>Skills</h2>
-    <p>Python, Django, HTML</p>
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills">
+            <div class="skill">Python</div>
+            <div class="skill">Django</div>
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">Git</div>
+        </div>
+    </section>
 
-    <h2>Contact</h2>
-    <p>Email: your@email.com</p>
+    <!-- About Me Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! I’m Periz, an aspiring developer who loves building web applications using Python and Django. I enjoy creating clean and functional projects and constantly learning new skills.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact">
+            <a href="mailto:your@email.com">Email Me</a>
+            <a href="https://github.com/perizdonah3" target="_blank">GitHub</a>
+            <a href="#">LinkedIn</a>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026 Periz Donah
+    </footer>
 
 </body>
 </html>
